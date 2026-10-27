@@ -118,6 +118,10 @@ if (contactForm && contactStatus) {
       contactStatus.className = "contact-status is-success";
       contactStatus.innerHTML =
         "<strong>Message sent successfully!</strong><span>Thank you for reaching out. I'll get back to you as soon as possible.</span>";
+      window.setTimeout(() => {
+        contactStatus.hidden = true;
+        contactStatus.textContent = "";
+      }, 5000);
     } catch (error) {
       contactStatus.className = "contact-status is-error";
       contactStatus.textContent =
