@@ -281,8 +281,24 @@ html[data-theme="dark"] {
     }
 
     .contact-note,
-    .contact-detail dd {
+    .contact-detail dd,
+    .contact-status,
+    .contact-status.is-sending {
       color: #a1a1aa;
+    }
+
+    .contact-status {
+      strong {
+        color: #f4f4f5;
+      }
+
+      &.is-success strong {
+        color: #86efac;
+      }
+
+      &.is-error {
+        color: #fda4af;
+      }
     }
 
     .contact-submit {

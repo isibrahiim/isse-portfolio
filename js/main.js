@@ -35,6 +35,8 @@ const floatingContact = document.querySelector(".floating-contact");
 const floatingContactToggle = document.querySelector(".floating-contact-toggle");
 const floatingContactMenu = document.querySelector("#floating-contact-menu");
 const floatingContactClose = document.querySelector(".floating-contact-close");
+const contactForm = document.querySelector(".contact-form");
+const contactStatus = document.querySelector(".contact-status");
 
 const setContactMenuOpen = (isOpen) => {
   if (!floatingContactToggle || !floatingContactMenu) {
@@ -80,6 +82,51 @@ if (floatingContact && floatingContactToggle && floatingContactMenu) {
     if (event.key === "Escape" && !floatingContactMenu.hidden) {
       setContactMenuOpen(false);
       floatingContactToggle.focus();
+    }
+  });
+}
+
+if (contactForm && contactStatus) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(".contact-submit");
+    const formData = new FormData(contactForm);
+
+    contactStatus.hidden = false;
+    contactStatus.className = "contact-status is-sending";
+    contactStatus.textContent = "Sending your message...";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Contact form submission failed: ${response.status}`);
+      }
+
+      contactForm.reset();
+      contactStatus.className = "contact-status is-success";
+      contactStatus.innerHTML =
+        "<strong>Message sent successfully!</strong><span>Thank you for reaching out. I'll get back to you as soon as possible.</span>";
+    } catch (error) {
+      contactStatus.className = "contact-status is-error";
+      contactStatus.textContent =
+        "Your message could not be sent. Please try again or email me directly.";
+      console.error("Contact form submission failed.", error);
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
     }
   });
 }

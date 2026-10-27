@@ -265,6 +265,34 @@
     font-size: 13px;
   }
 
+  .contact-status {
+    display: grid;
+    gap: 4px;
+    margin: -2px 0 0;
+    color: #52525b;
+    font-size: 13px;
+    line-height: 1.5;
+
+    strong {
+      color: #18181b;
+      font-size: 14px;
+    }
+
+    &.is-sending {
+      color: #71717a;
+    }
+
+    &.is-success {
+      strong {
+        color: #16803c;
+      }
+    }
+
+    &.is-error {
+      color: #b42318;
+    }
+  }
+
   .contact-details {
     display: grid;
     gap: 18px;

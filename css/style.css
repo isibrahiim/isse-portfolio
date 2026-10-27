@@ -969,6 +969,27 @@ header .header-actions .resume-btn:hover {
   color: #666;
   font-size: 13px;
 }
+.contact .contact-status {
+  display: grid;
+  gap: 4px;
+  margin: -2px 0 0;
+  color: #52525b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.contact .contact-status strong {
+  color: #18181b;
+  font-size: 14px;
+}
+.contact .contact-status.is-sending {
+  color: #71717a;
+}
+.contact .contact-status.is-success strong {
+  color: #16803c;
+}
+.contact .contact-status.is-error {
+  color: #b42318;
+}
 .contact .contact-details {
   display: grid;
   gap: 18px;
@@ -1390,8 +1411,19 @@ html[data-theme=dark] .contact textarea {
   color: #f4f4f5;
 }
 html[data-theme=dark] .contact .contact-note,
-html[data-theme=dark] .contact .contact-detail dd {
+html[data-theme=dark] .contact .contact-detail dd,
+html[data-theme=dark] .contact .contact-status,
+html[data-theme=dark] .contact .contact-status.is-sending {
   color: #a1a1aa;
+}
+html[data-theme=dark] .contact .contact-status strong {
+  color: #f4f4f5;
+}
+html[data-theme=dark] .contact .contact-status.is-success strong {
+  color: #86efac;
+}
+html[data-theme=dark] .contact .contact-status.is-error {
+  color: #fda4af;
 }
 html[data-theme=dark] .contact .contact-submit {
   background-color: #f4f4f5;
