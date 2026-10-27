@@ -50,7 +50,7 @@
     <!-- Font Awesome Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
@@ -121,7 +121,7 @@
             </div>
 
             <div class="hero-contact-row">
-                <div class="hero-social-links" aria-label="Social and contact links">
+                <div class="hero-social-links" role="group" aria-label="Social and contact links">
                     <a href="https://github.com/isibrahiim" target="_blank" rel="noopener noreferrer"
                         aria-label="GitHub profile">
                         <i class="fa-brands fa-github" aria-hidden="true"></i>
@@ -230,8 +230,9 @@
 
 <!-- Skills and Tools -->
 <section id="skills" class="skills" aria-labelledby="skills-title" data-reveal>
-    <article class="skills-card">
-        <h2 id="skills-title">Skills &amp; Tools</h2>
+    <h2 id="skills-title" class="sr-only">Skills and tools</h2>
+    <article class="skills-card" aria-labelledby="skills-tools-title">
+        <h2 id="skills-tools-title">Skills &amp; Tools</h2>
         <ul class="skill-list">
             <li>Python</li>
             <li>HTML5</li>
@@ -282,21 +283,21 @@
         <h2>Experience</h2>
         <ol class="timeline">
             <li class="timeline-item">
-                <time class="timeline-date">2026 – Present</time>
+                <span class="timeline-date"><time datetime="2026-01-01">2026</time> – Present</span>
                 <div class="timeline-content">
                     <h3>AI Fairness Research · University of Helsinki</h3>
                     <p>Researched algorithmic bias and proposed FairnessLens, an AI fairness auditing tool.</p>
                 </div>
             </li>
             <li class="timeline-item">
-                <time class="timeline-date">2025 – 2026</time>
+                <span class="timeline-date"><time datetime="2025-01-01">2025</time> – <time datetime="2026-12-31">2026</time></span>
                 <div class="timeline-content">
                     <h3>Python Security Automation · Google</h3>
                     <p>Developed a Python algorithm to automate IP access control and improve security.</p>
                 </div>
             </li>
             <li class="timeline-item">
-                <time class="timeline-date">29.9. – 20.10.26</time>
+                <span class="timeline-date"><time datetime="2026-09-29">29.9.</time> – <time datetime="2026-10-20">20.10.26</time></span>
                 <div class="timeline-content">
                     <h3>AI Fundamentals · University of Helsinki</h3>
                     <p>Explored machine learning, neural networks, AI applications, and problem-solving.</p>
@@ -309,21 +310,21 @@
         <h2>Education</h2>
         <ol class="timeline">
             <li class="timeline-item">
-                <time class="timeline-date">2026 – Present</time>
+                <span class="timeline-date"><time datetime="2026-01-01">2026</time> – Present</span>
                 <div class="timeline-content">
                     <h3>ICT Engineering Student · JAMK</h3>
                     <p>Bachelor of Engineering in Information and Communication Technology (ICT). Ongoing.</p>
                 </div>
             </li>
             <li class="timeline-item">
-                <time class="timeline-date">2024 – 2026</time>
+                <span class="timeline-date"><time datetime="2024-01-01">2024</time> – <time datetime="2026-12-31">2026</time></span>
                 <div class="timeline-content">
                     <h3>StadinAO, Helsinki</h3>
                     <p>Upper Secondary Qualification with Honors.</p>
                 </div>
             </li>
             <li class="timeline-item">
-                <time class="timeline-date">2020 – 2022</time>
+                <span class="timeline-date"><time datetime="2020-01-01">2020</time> – <time datetime="2022-12-31">2022</time></span>
                 <div class="timeline-content">
                     <h3>MBA Kids · School for Kids &amp; Teens</h3>
                     <p>Studied entrepreneurship, business fundamentals, financial literacy, and creative problem-solving.</p>
@@ -390,7 +391,7 @@
         <div class="footer-brand">
             <h2>Isse Ibrahim</h2>
             <p>Building accessible, responsive interfaces and thoughtful digital experiences.</p>
-            <div class="footer-social-links" aria-label="Social links">
+            <div class="footer-social-links" role="group" aria-label="Social links">
                 <a href="https://github.com/isibrahiim" target="_blank" rel="noopener noreferrer"
                     aria-label="GitHub profile">
                     <i class="fa-brands fa-github" aria-hidden="true"></i>
@@ -424,7 +425,8 @@
 </footer>
 
 <div class="floating-contact">
-    <div class="floating-contact-menu" id="floating-contact-menu" aria-labelledby="floating-contact-title" hidden>
+    <div class="floating-contact-menu" id="floating-contact-menu" role="dialog"
+        aria-labelledby="floating-contact-title" hidden>
         <div class="floating-contact-heading">
             <div>
                 <h2 id="floating-contact-title">Get in touch</h2>
