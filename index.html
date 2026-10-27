@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding & Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Isse Ibrahim | Front-end Developer</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Explore Isse Ibrahim's portfolio, featuring web development projects, programming skills, and cybersecurity interests. Based in Jyväskylä, Finland.">
+    <meta name="author" content="Isse Ibrahim">
+
+    <!-- Open Graph: Social Media Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Isse Ibrahim | Front-end Developer">
+    <meta property="og:description"
+        content="Explore my web development projects, programming skills, and cybersecurity interests.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Isse Ibrahim Portfolio">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Isse Ibrahim | Front-end Developer">
+    <meta name="twitter:description"
+        content="Web development projects, programming skills, and cybersecurity interests.">
+
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicon_io/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+
+    <!-- Browser Theme Colors -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#18181b" media="(prefers-color-scheme: dark)">
+
+    <!-- Google Fonts: Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet: Compiled from Sass -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Website logo -->
+    <a href="#home" class="logo" aria-label="Isse Ibrahim - Home">
+        <img src="images/logo.png" alt="Isse Ibrahim logo" width="120">
+    </a>
+        <!-- Navigation menu -->
+        <nav id="primary-navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Header Actions -->
+        <div class="header-actions">
+
+            <!-- Dark / Light Mode -->
+            <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+
+            <!-- Resume -->
+            <a href="assets/Isse_Ibrahim_Resume.pdf" class="resume-btn" target="_blank" rel="noopener noreferrer">
+                Resume
+            </a>
+
+            <!-- Mobile navigation toggle -->
+            <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="primary-navigation">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+        </div>
+    </header>
+    
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <p class="hero-intro">Hello, I'm Isse Ibrahim</p>
+
+            <h1>Front-End Developer</h1>
+
+            <p class="hero-description">
+                I build responsive web applications and intuitive
+                interfaces with a focus on performance and accessibility.
+                Currently exploring modern web technologies and
+                cybersecurity.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="btn-secondary">
+                    Contact Me
+                </a>
+            </div>
+
+            <div class="hero-contact-row">
+                <div class="hero-social-links" aria-label="Social and contact links">
+                    <a href="https://github.com/isibrahiim" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub profile">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/isseibrahim" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn profile">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:ai2867@student.jamk.fi" aria-label="Send an email">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="hero-location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Jyväskylä, Finland
+                </p>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/profile.png"
+                 alt="Portrait of Isse Ibrahim">
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" aria-labelledby="about-title" data-reveal>
+        <div class="about-copy">
+            <p class="section-eyebrow">About me</p>
+            <h2 id="about-title">Building useful, accessible digital experiences.</h2>
+            <p>
+                I’m an ICT engineering student and front-end developer based in Jyväskylä,
+                Finland. I enjoy turning ideas into responsive interfaces that are clear,
+                practical, and easy to use.
+            </p>
+        </div>
+
+        <dl class="about-highlights">
+            <div class="about-highlight">
+                <dt>What I do</dt>
+                <dd>Front-end development, responsive design, and accessible interfaces.</dd>
+            </div>
+            <div class="about-highlight">
+                <dt>What I’m exploring</dt>
+                <dd>JavaScript, Python automation, cybersecurity, and AI fairness.</dd>
+            </div>
+            <div class="about-highlight">
+                <dt>How I work</dt>
+                <dd>Thoughtfully, collaboratively, and with attention to useful details.</dd>
+            </div>
+        </dl>
+    </section>
+
+    <!-- Selected Projects -->
+<section id="projects" class="projects" data-reveal>
+
+    <div class="section-heading">
+        <div>
+            <p class="section-eyebrow">A few things I have built</p>
+            <h2>Selected Projects</h2>
+        </div>
+    </div>
+
+    <div class="projects-grid" id="projects-list">
+        <article class="project-card project-card--featured" id="featured-project" aria-live="polite">
+            <div class="project-card-image">
+                <img id="featured-project-image" src="images/hooyo_skincare.png"
+                    alt="HOOYO Somali botanical skincare e-commerce website concept">
+                <span class="project-card-badge">Featured project</span>
+            </div>
+
+            <div class="project-card-content">
+                <div class="project-card-heading">
+                    <div>
+                        <p id="featured-project-label" class="project-card-label">01 / E-commerce concept</p>
+                        <h3 id="featured-project-title">HOOYO · Skincare E-commerce Concept</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </div>
+                <p id="featured-project-description">
+                    A Somali-inspired skincare brand and online store concept focused on
+                    product discovery, clean design, and an intuitive shopping experience.
+                </p>
+
+                <ul id="featured-project-tags" class="project-tags" aria-label="Technologies used">
+                    <li>UI/UX</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Responsive</li>
+                </ul>
+
+                <div class="project-card-actions">
+                    <a id="featured-project-primary-link" href="#contact" class="project-button">Case Study</a>
+                    <a id="featured-project-source-link" href="https://github.com/isibrahiim"
+                        target="_blank" rel="noopener noreferrer" class="project-button">Source</a>
+                </div>
+            </div>
+        </article>
+
+        <aside class="projects-sidebar" id="project-sidebar" aria-label="Other projects"></aside>
+    </div>
+
+</section>
+
+<!-- Skills and Tools -->
+<section id="skills" class="skills" aria-labelledby="skills-title" data-reveal>
+    <article class="skills-card">
+        <h2 id="skills-title">Skills &amp; Tools</h2>
+        <ul class="skill-list">
+            <li>Python</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Jest</li>
+        </ul>
+        <p class="tools-description">
+            Tools &amp; Platforms: Git, GitHub, GitLab, VS Code, Linux, Windows, MySQL
+        </p>
+    </article>
+
+    <article class="skills-card" aria-labelledby="proficiency-title">
+        <h2 id="proficiency-title">Proficiency</h2>
+        <ul class="proficiency-list">
+            <li>
+                <span class="proficiency-label">HTML &amp; CSS</span>
+                <span class="proficiency-track">
+                    <span class="proficiency-level" style="--proficiency: 100%"></span>
+                </span>
+            </li>
+            <li>
+                <span class="proficiency-label">Python</span>
+                <span class="proficiency-track">
+                    <span class="proficiency-level" style="--proficiency: 85%"></span>
+                </span>
+            </li>
+            <li>
+                <span class="proficiency-label">JavaScript</span>
+                <span class="proficiency-track">
+                    <span class="proficiency-level" style="--proficiency: 70%"></span>
+                </span>
+            </li>
+            <li>
+                <span class="proficiency-label">Linux &amp; Git</span>
+                <span class="proficiency-track">
+                    <span class="proficiency-level" style="--proficiency: 60%"></span>
+                </span>
+            </li>
+        </ul>
+    </article>
+</section>
+
+<!-- Experience and Education -->
+<section id="experience" class="experience" aria-label="Experience and education" data-reveal>
+    <article class="experience-card">
+        <h2>Experience</h2>
+        <ol class="timeline">
+            <li class="timeline-item">
+                <time class="timeline-date">2026 – Present</time>
+                <div class="timeline-content">
+                    <h3>AI Fairness Research · University of Helsinki</h3>
+                    <p>Researched algorithmic bias and proposed FairnessLens, an AI fairness auditing tool.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <time class="timeline-date">2025 – 2026</time>
+                <div class="timeline-content">
+                    <h3>Python Security Automation · Google</h3>
+                    <p>Developed a Python algorithm to automate IP access control and improve security.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <time class="timeline-date">29.9. – 20.10.26</time>
+                <div class="timeline-content">
+                    <h3>AI Fundamentals · University of Helsinki</h3>
+                    <p>Explored machine learning, neural networks, AI applications, and problem-solving.</p>
+                </div>
+            </li>
+        </ol>
+    </article>
+
+    <article class="experience-card">
+        <h2>Education</h2>
+        <ol class="timeline">
+            <li class="timeline-item">
+                <time class="timeline-date">2026 – Present</time>
+                <div class="timeline-content">
+                    <h3>ICT Engineering Student · JAMK</h3>
+                    <p>Bachelor of Engineering in Information and Communication Technology (ICT). Ongoing.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <time class="timeline-date">2024 – 2026</time>
+                <div class="timeline-content">
+                    <h3>StadinAO, Helsinki</h3>
+                    <p>Upper Secondary Qualification with Honors.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <time class="timeline-date">2020 – 2022</time>
+                <div class="timeline-content">
+                    <h3>MBA Kids · School for Kids &amp; Teens</h3>
+                    <p>Studied entrepreneurship, business fundamentals, financial literacy, and creative problem-solving.</p>
+                </div>
+            </li>
+        </ol>
+    </article>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact" aria-label="Contact" data-reveal>
+    <article class="contact-card">
+        <h2>Get in touch</h2>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            class="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="sr-only">
+                <label>Do not fill this out if you are human: <input name="bot-field"></label>
+            </p>
+            <div class="contact-form-row">
+                <label for="contact-name">
+                    <span class="sr-only">Full name</span>
+                    <input id="contact-name" type="text" name="name" placeholder="Full name" required>
+                </label>
+                <label for="contact-email">
+                    <span class="sr-only">Email address</span>
+                    <input id="contact-email" type="email" name="email" placeholder="Email address" required>
+                </label>
+            </div>
+            <label for="contact-message">
+                <span class="sr-only">Message</span>
+                <textarea id="contact-message" name="message" placeholder="Message" required></textarea>
+            </label>
+            <div class="contact-form-row">
+                <button type="submit" class="contact-submit">Send Message</button>
+                <p class="contact-note">Typically replies within 2 business days.</p>
+            </div>
+        </form>
+    </article>
+
+    <article class="contact-card">
+        <h2>Contact Details</h2>
+        <dl class="contact-details">
+            <div class="contact-detail">
+                <dt>Email</dt>
+                <dd><a href="mailto:ai2867@student.jamk.fi">ai2867@student.jamk.fi</a></dd>
+            </div>
+            <div class="contact-detail">
+                <dt>Location</dt>
+                <dd>Jyväskylä, Finland</dd>
+            </div>
+            <div class="contact-detail">
+                <dt>Availability</dt>
+                <dd>Open for contract and full-time opportunities.</dd>
+            </div>
+        </dl>
+    </article>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <h2>Isse Ibrahim</h2>
+            <p>Building accessible, responsive interfaces and thoughtful digital experiences.</p>
+            <div class="footer-social-links" aria-label="Social links">
+                <a href="https://github.com/isibrahiim" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub profile">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/isseibrahim" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn profile">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:ai2867@student.jamk.fi" aria-label="Send an email">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav aria-label="Footer navigation">
+            <h2 class="footer-heading">Explore</h2>
+            <ul class="footer-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>&copy; 2026 Isse Ibrahim. All rights reserved.</span>
+        <span>Designed and built with care.</span>
+    </div>
+</footer>
+
+<div class="floating-contact">
+    <div class="floating-contact-menu" id="floating-contact-menu" aria-labelledby="floating-contact-title" hidden>
+        <div class="floating-contact-heading">
+            <div>
+                <h2 id="floating-contact-title">Get in touch</h2>
+                <p>How can I help you?</p>
+            </div>
+            <button type="button" class="floating-contact-close" aria-label="Close contact menu">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="floating-contact-options">
+            <a href="mailto:ai2867@student.jamk.fi">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                <span>Email</span>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/isseibrahim" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="floating-contact-message">
+                <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                <span>Leave a message</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+        <p class="floating-contact-footer">Choose how you would like to connect</p>
+    </div>
+    <button type="button" class="floating-contact-toggle" aria-expanded="false"
+        aria-controls="floating-contact-menu" aria-label="Open contact menu">
+        <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+        <span>Contact</span>
+    </button>
+</div>
+
+</body>
+
+</html>
