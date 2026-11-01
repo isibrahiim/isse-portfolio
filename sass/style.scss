@@ -48,7 +48,6 @@ html[data-theme="dark"] {
   }
 
   header {
-    border-bottom: 1px solid #3f3f46;
     background-color: #18181b;
 
     .logo img {
@@ -97,6 +96,8 @@ html[data-theme="dark"] {
   }
 
   .about {
+    background: linear-gradient(135deg, #121827 0%, #101217 42%, #0d0f14 100%);
+
     .section-eyebrow,
     p,
     .about-highlight dd {
@@ -108,10 +109,38 @@ html[data-theme="dark"] {
       color: #f4f4f5;
     }
 
-    .about-highlight {
-      border-color: #3f3f46;
-      background-color: #18181b;
+    h2 span {
+      color: #5b8def;
     }
+
+    .about-actions {
+      .btn-secondary {
+        border-color: #5b8def;
+        color: #f4f4f5;
+      }
+    }
+
+    .about-highlight {
+      border-color: #272d38;
+      background-color: #18181b;
+
+      .about-highlight-icon {
+        background-color: #242a3a;
+      }
+
+      > i {
+        color: #a1a1aa;
+      }
+    }
+
+    .about-values {
+      border-color: #3f3f46;
+
+      strong {
+        color: #f4f4f5;
+      }
+    }
+
   }
 
   .projects {
@@ -133,9 +162,14 @@ html[data-theme="dark"] {
       color: #a1a1aa;
     }
 
-    .project-card,
-    .sidebar-project {
+    .project-card {
       border-color: #3f3f46;
+      background-color: #27272a;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar-project {
+      border: 0;
       background-color: #27272a;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
@@ -227,8 +261,7 @@ html[data-theme="dark"] {
   .experience {
     .skills-card,
     .experience-card {
-      border-color: #3f3f46;
-      background-color: #27272a;
+      background-color: #242427;
     }
 
     h2 {
@@ -260,12 +293,53 @@ html[data-theme="dark"] {
     }
   }
 
+  .skills {
+    .skills-category-title {
+      color: #f4f4f5;
+    }
+
+    .skill-list li {
+      background-color: transparent;
+      color: #f4f4f5;
+    }
+
+    .proficiency-label,
+    .proficiency-value {
+      color: #f4f4f5;
+    }
+
+    .proficiency-track {
+      background-color: #18181b;
+    }
+  }
+
+  .experience {
+    .experience-card {
+      border-color: #272d38;
+      background-color: #242427;
+    }
+
+    .section-icon,
+    .timeline-organization {
+      background-color: #3f3f46;
+      color: #5b8def;
+    }
+
+    .timeline-date,
+    .timeline-content p {
+      color: #a1a1aa;
+    }
+
+    .timeline-item {
+      border-color: #3f3f46;
+    }
+  }
+
   .contact {
     border-color: #3f3f46;
 
     .contact-card {
-      border-color: #3f3f46;
-      background-color: #27272a;
+      background-color: #242427;
     }
 
     h2,
@@ -281,6 +355,7 @@ html[data-theme="dark"] {
     }
 
     .contact-note,
+    .contact-intro,
     .contact-detail dd,
     .contact-status,
     .contact-status.is-sending {
@@ -305,6 +380,19 @@ html[data-theme="dark"] {
       background-color: #f4f4f5;
       color: #18181b;
     }
+
+    .contact-form label > i {
+      color: #5b8def;
+    }
+
+    .contact-detail {
+      border-color: #3f3f46;
+
+      .contact-detail-icon {
+        background-color: #242a3a;
+        color: #5b8def;
+      }
+    }
   }
 
   .site-footer {
@@ -314,12 +402,17 @@ html[data-theme="dark"] {
     }
 
     .footer-brand p,
-    .footer-links a {
+    .footer-links a,
+    .footer-connect p {
       color: #a1a1aa;
     }
 
     .footer-social-links a {
       color: #d4d4d8;
+    }
+
+    .footer-contact-link {
+      color: #5b8def;
     }
 
     .footer-bottom {
