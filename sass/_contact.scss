@@ -359,12 +359,14 @@
     }
 
     dt {
+      display: contents;
       color: #18181b;
       font-size: 14px;
       font-weight: 700;
     }
 
     dd {
+      grid-column: 2;
       margin: 0;
       color: #666;
       font-size: 14px;
