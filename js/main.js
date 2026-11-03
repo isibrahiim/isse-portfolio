@@ -137,6 +137,33 @@ if (contactForm && contactStatus) {
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#primary-navigation");
+const header = document.querySelector("header");
+const navigationLinks = navigation
+  ? Array.from(navigation.querySelectorAll("a[href^='#']"))
+  : [];
+
+const closeNavigation = () => {
+  if (!menuToggle || !navigation) {
+    return;
+  }
+
+  navigation.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open navigation menu");
+  menuToggle.innerHTML =
+    '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+};
+
+const scrollToSection = (section) => {
+  const headerHeight = header?.getBoundingClientRect().height ?? 0;
+  const targetTop =
+    section.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+  window.scrollTo({
+    top: Math.max(0, targetTop),
+    behavior: "smooth",
+  });
+};
 
 const revealElements = document.querySelectorAll("[data-reveal]");
 
@@ -172,15 +199,61 @@ if (menuToggle && navigation) {
       : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
   });
 
-  navigation.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navigation.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Open navigation menu");
-      menuToggle.innerHTML =
-        '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+  navigationLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+      const targetSection = targetId ? document.querySelector(targetId) : null;
+
+      if (!targetSection) {
+        return;
+      }
+
+      event.preventDefault();
+      closeNavigation();
+      navigationLinks.forEach((navigationLink) =>
+        navigationLink.removeAttribute("aria-current")
+      );
+      link.setAttribute("aria-current", "page");
+      window.history.pushState(null, "", targetId);
+
+      window.requestAnimationFrame(() => scrollToSection(targetSection));
     });
   });
+}
+
+if (navigationLinks.length) {
+  const sections = navigationLinks
+    .map((link) => {
+      const targetId = link.getAttribute("href");
+      return targetId ? document.querySelector(targetId) : null;
+    })
+    .filter(Boolean);
+
+  const updateActiveNavigation = () => {
+    const headerHeight = header?.getBoundingClientRect().height ?? 0;
+    const activePosition = window.scrollY + headerHeight + 1;
+    let activeSection = sections[0];
+
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+      if (sectionTop <= activePosition) {
+        activeSection = section;
+      }
+    });
+
+    navigationLinks.forEach((link) => {
+      if (link.getAttribute("href") === `#${activeSection.id}`) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", updateActiveNavigation, { passive: true });
+  window.addEventListener("resize", updateActiveNavigation);
+  updateActiveNavigation();
 }
 
 const featuredProject = document.querySelector("#featured-project");
